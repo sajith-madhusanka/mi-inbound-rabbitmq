@@ -366,10 +366,11 @@
             "type": "attribute",
             "value": {
               "name": "rabbitmq.connection.oauth2.scope",
-              "displayName": "scope",
+              "displayName": "Scope",
               "inputType": "string",
               "defaultValue": "",
               "required": "true",
+              "enableCondition": [{"rabbitmq.connection.oauth2.enabled":true}],
               "helpTip": "Scopes to include in the OAuth 2.0 token request (space-separated if multiple)."
             }
           }
@@ -1009,7 +1010,7 @@
               "defaultValue": "",
               "required": "false",
               "enableCondition": ["AND",{"rabbitmq.dead.letter.queue.auto.declare":true},{"rabbitmq.classic.dead.letter.strategy": "FIXED_DELAY_RETRYABLE_DISCARD"}],
-              "helpTip": "Time-to-live (TTL) for messages in the Dead Letter Queue before being retried or discarded."
+              "helpTip": "Time-to-live (TTL) in milliseconds for messages in the Dead Letter Queue before being retried or discarded."
             }
           },
           {

@@ -218,7 +218,7 @@
                         {
                             "name": "rabbitmq.connection.oauth2.scope",
                             "type": "string",
-                            "required": true,
+                            "required": false,
                             "defaultValue": "",
                             "description": "Scopes to include in the OAuth 2.0 token request (space-separated if multiple)."
 
@@ -543,7 +543,7 @@
                             "type": "string",
                             "required": false,
                             "defaultValue": "",
-                            "description": "Time-to-live (TTL) for messages in the Dead Letter Queue before being retried or discarded."
+                            "description": "Time-to-live (TTL) in milliseconds for messages in the Dead Letter Queue before being retried or discarded."
                         },
                         {
                             "name": "rabbitmq.max.dead.lettered.count",
