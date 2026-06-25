@@ -262,7 +262,7 @@ public class RabbitMQEnvironment {
         }
 
         scope = scope.trim();
-        if (!scope.matches("^[^\\s]+(\\s+[^\\s]+)*$")) {
+        if (!scope.matches("^[\\S]+([ ][\\S]+)*$")) {
             log.error(logPrefix + " - The OAuth2 property 'scope' has an invalid format. " +
                     "Ensure it is separated by spaces if multiple scopes are provided.");
             throw new SynapseException("The 'scope' parameter has an invalid format. " +
