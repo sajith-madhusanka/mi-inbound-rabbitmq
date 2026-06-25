@@ -221,7 +221,6 @@
                             "required": false,
                             "defaultValue": "",
                             "description": "Scopes to include in the OAuth 2.0 token request (space-separated if multiple)."
-
                         },
                         {
                             "name": "rabbitmq.connection.idle.timeout",
